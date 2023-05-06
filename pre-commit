@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Executa os testes com Gradle
+./gradlew test
+
+# Verifica o resultado dos testes
+if [ $? -ne 0 ]; then
+  echo "Testes falharam. O commit será abortado."
+  exit 1
+fi

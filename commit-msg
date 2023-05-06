@@ -1,0 +1,5 @@
+#!/bin/sh
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+commit_msg=$(cat $1)
+echo "$branch_name: $commit_msg" > $1
+
